@@ -34,3 +34,4 @@ galaxy_info:
 
 dependencies:
   - robertdebock.bootstrap
+  - robertdebock.lsof

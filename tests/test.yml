@@ -5,6 +5,6 @@
   roles:
     - ansible-role-tftpd
 
-  tasks:
-    - name: check if port is open
-      shell: lsof -iUDP:69
+#  tasks:
+#    - name: check if port is open
+#      shell: lsof -iUDP:69

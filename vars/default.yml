@@ -1,5 +1,5 @@
 ---
 packages:
-- tftp-server
+- tftpd
 services:
 - tftpd

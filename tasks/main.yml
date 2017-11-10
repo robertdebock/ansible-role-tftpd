@@ -14,10 +14,12 @@
   with_items:
     - "{{ packages }}"
 
-- name: start and enable software
-  service:
-    name: "{{ item }}"
-    state: started
-    enabled: yes
-  with_items:
-    - "{{ services }}"
+- name: create tfptroot
+  file:
+    path: "{{ tftproot }}"
+    state: directory
+
+- name: enable tftpd in stat_xinetd
+  template:
+    src: templates/tftp.j2
+    dest: /etc/xinetd.d/tftp

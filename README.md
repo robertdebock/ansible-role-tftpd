@@ -11,12 +11,13 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-None known.
+- tftproot - The directory to use as the tftproot. (default: "/tftproot")
 
 Dependencies
 ------------
 
 - robertdebock.bootstrap
+- robertdebock.xinetd
 
 Example Playbook
 ----------------
@@ -24,7 +25,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - robertdebock.ROLE
+    - robertdebock.xinetd
 ```
 
 License

@@ -24,4 +24,4 @@
     src: templates/tftp.j2
     dest: /etc/xinetd.d/tftp
   notify:
-    restart service
+    restart services

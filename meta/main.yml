@@ -26,11 +26,17 @@ galaxy_info:
     - artful
 
   galaxy_tags:
-    - alpine
-    - debian
-    - fedora
-    - rhel
-    - ubuntu
+    - tftp
+    - tfptd
+    - networking
+    - system
+    - pxe
+    - Alpine
+    - CentOS
+    - Debian
+    - Fedora
+    - RHEL
+    - Ubuntu
 
 dependencies:
   - robertdebock.bootstrap

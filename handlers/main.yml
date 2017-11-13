@@ -1,6 +1,6 @@
 ---
 # handlers file for ansible-role-tftpd
-- name: restart services
+- name: restart xinetd
   service:
-    name: "xinetd"
+    name: xinetd
     state: restarted

@@ -19,7 +19,7 @@
     path: "{{ tftproot }}"
     state: directory
 
-- name: enable tftpd in stat_xinetd
+- name: enable tftpd in xinetd
   template:
     src: templates/tftp.j2
     dest: /etc/xinetd.d/tftp

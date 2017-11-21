@@ -39,5 +39,5 @@ galaxy_info:
     - Ubuntu
 
 dependencies:
-  - robertdebock.bootstrap
-  - robertdebock.xinetd
+  - robertdebock.ansible-role-bootstrap
+  - robertdebock.ansible-role-xinetd

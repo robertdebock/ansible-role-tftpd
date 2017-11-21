@@ -1,4 +1,4 @@
-- name: robertdebock.bootstrap
-  src: robertdebock.bootstrap
-- name: robertdebock.xinetd
-  src: robertdebock.xinetd
+- name: robertdebock.ansible-role-bootstrap
+  src: robertdebock.ansible-role-bootstrap
+- name: robertdebock.ansible-role-xinetd
+  src: robertdebock.ansible-role-xinetd

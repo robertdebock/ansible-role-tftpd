@@ -1,4 +1,4 @@
-tftpd
+ansible-role-tftpd
 =========
 
 Provides tftpd

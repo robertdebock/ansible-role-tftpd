@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Robert de Bock
   description: Provides a tftp server using xinetd.

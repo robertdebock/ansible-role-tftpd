@@ -18,8 +18,13 @@ Role Variables
 Dependencies
 ------------
 
-- robertdebock.bootstrap
-- robertdebock.xinetd
+- robertdebock.ansible-role-bootstrap
+- robertdebock.ansible-role-xinetd
+
+Download the dependencies by issueing this command:
+```
+ansible-galaxy install --role-file requirements.yml
+```
 
 Example Playbook
 ----------------
@@ -27,7 +32,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - robertdebock.tftpd
+    - ansible-role-tftpd
 ```
 
 License

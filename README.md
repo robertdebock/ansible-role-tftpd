@@ -21,7 +21,7 @@ Dependencies
 - robertdebock.ansible-role-bootstrap
 - robertdebock.ansible-role-xinetd
 
-Download the dependencies by issueing this command:
+Download the dependencies by issuing this command:
 ```
 ansible-galaxy install --role-file requirements.yml
 ```
@@ -32,8 +32,10 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - ansible-role-tftpd
+    - robertdebock.ansible-role-tftpd
 ```
+
+Install this role using `galaxy install robertdebock.ansible-role-nginx`.
 
 License
 -------

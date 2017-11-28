@@ -35,7 +35,7 @@ Example Playbook
     - robertdebock.ansible-role-tftpd
 ```
 
-Install this role using `galaxy install robertdebock.ansible-role-nginx`.
+Install this role using `galaxy install robertdebock.ansible-role-tftpd`.
 
 License
 -------

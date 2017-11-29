@@ -1,7 +1,7 @@
 tftpd
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock.ansible-role-tftpd.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-tftpd)
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-tftpd.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-tftpd)
 
 Provides tftpd for your system.
 

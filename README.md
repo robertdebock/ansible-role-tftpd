@@ -1,7 +1,7 @@
-ansible-role-tftpd
+tftpd
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock/ansible-role-tftpd.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-tftpd)
+[![Build Status](https://travis-ci.org/robertdebock.ansible-role-tftpd.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-tftpd)
 
 Provides tftpd for your system.
 
@@ -18,8 +18,8 @@ Role Variables
 Dependencies
 ------------
 
-- robertdebock.ansible-role-bootstrap
-- robertdebock.ansible-role-xinetd
+- robertdebock.bootstrap
+- robertdebock.xinetd
 
 Download the dependencies by issuing this command:
 ```
@@ -32,10 +32,10 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - robertdebock.ansible-role-tftpd
+    - robertdebock.tftpd
 ```
 
-Install this role using `galaxy install robertdebock.ansible-role-tftpd`.
+Install this role using `galaxy install robertdebock.tftpd`.
 
 License
 -------

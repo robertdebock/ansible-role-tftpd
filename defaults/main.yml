@@ -1,3 +1,3 @@
 ---
 # defaults file for tftpd
-tftproot: /tftpboot
+tftpd_tftproot: /tftpboot

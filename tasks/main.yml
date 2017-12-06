@@ -12,11 +12,11 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ packages }}"
+    - "{{ tftpd_packages }}"
 
 - name: create tfptroot
   file:
-    path: "{{ tftproot }}"
+    path: "{{ tftpd_tftproot }}"
     state: directory
 
 - name: enable tftpd in xinetd

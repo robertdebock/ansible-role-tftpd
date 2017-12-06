@@ -13,7 +13,7 @@ Access to a repository providing tftpd.
 Role Variables
 --------------
 
-- tftproot - The directory to use as the tftproot. (default: "/tftproot")
+- tftpd_tftproot - The directory to use as the tftproot. (default: "/tftproot")
 
 Dependencies
 ------------

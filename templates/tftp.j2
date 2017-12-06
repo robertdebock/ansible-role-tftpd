@@ -5,7 +5,7 @@ service tftp
     wait        = yes
     user        = root
     server      = /usr/sbin/in.tftpd
-    server_args = -s {{ tftproot }}
+    server_args = -s {{ tftpd_tftproot }}
     disable     = no
     per_source  = 11
     cps         = 100 2

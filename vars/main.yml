@@ -1,2 +1,11 @@
 ---
 # vars file for template
+tftpd_packages:
+  CentOS:
+    - tftp-server
+  default:
+    - tftpd
+  Fedora:
+    - tftp-server
+  openSUSE Leap:
+    - yast2-tftp-server

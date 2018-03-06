@@ -18,6 +18,8 @@ Role Variables
 Dependencies
 ------------
 
+These dependencies can be used to install all requirements.
+
 - robertdebock.bootstrap
 - robertdebock.xinetd
 
@@ -32,7 +34,9 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - robertdebock.tftpd
+    - role: robertdebock.bootstrap
+    - role: robertdebock.xinetd
+    - role: robertdebock.tftpd
 ```
 
 Install this role using `galaxy install robertdebock.tftpd`.

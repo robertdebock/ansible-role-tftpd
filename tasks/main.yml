@@ -16,7 +16,7 @@
 
 - name: enable tftpd in xinetd
   template:
-    src: templates/tftp.j2
+    src: tftp.j2
     dest: /etc/xinetd.d/tftp
   notify:
     restart xinetd

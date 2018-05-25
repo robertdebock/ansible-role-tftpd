@@ -1,6 +1,8 @@
 ---
 # # handlers file for tftpd
-# - name: restart xinetd
-#   service:
-#     name: xinetd
-#     state: restarted
+- name: restart xinetd
+  service:
+    name: xinetd
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker"

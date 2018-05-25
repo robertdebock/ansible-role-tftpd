@@ -20,5 +20,3 @@
     dest: /etc/xinetd.d/tftp
   notify:
     restart xinetd
-  when:
-    - ansible_virtualization_type != "docker"

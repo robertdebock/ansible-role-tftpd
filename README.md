@@ -28,7 +28,7 @@ Dependencies
 These dependencies can be used to install all requirements.
 
 - robertdebock.bootstrap
-- robertdebock.xinetd
+- robertdebock.xinetd (This is a hard dependency, because this role depends on a handler defined in the xinetd role.
 
 Download the dependencies by issuing this command:
 ```

@@ -27,8 +27,8 @@ Dependencies
 
 These dependencies can be used to install all requirements.
 
-- robertdebock.bootstrap
-- robertdebock.xinetd (This is a hard dependency, because this role depends on a handler defined in the xinetd role.
+- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
+- [robertdebock.xinetd](https://travis-ci.org/robertdebock/ansible-role-xinetd) (This is a hard dependency, because this role depends on a handler defined in the xinetd role.
 
 Download the dependencies by issuing this command:
 ```

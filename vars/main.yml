@@ -9,3 +9,5 @@ tftpd_packages:
     - tftp-server
   openSUSE Leap:
     - yast2-tftp-server
+  openSUSE Tumbleweed:
+    - yast2-tftp-server

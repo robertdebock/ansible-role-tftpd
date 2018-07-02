@@ -39,11 +39,11 @@ galaxy_info:
     - networking
     - system
     - pxe
-    - CentOS
-    - Debian
-    - Fedora
-    - RHEL
-    - Ubuntu
+    - centos
+    - debian
+    - fedora
+    - rhel
+    - ubuntu
 
 dependencies:
   - role: robertdebock.xinetd

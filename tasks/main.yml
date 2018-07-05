@@ -1,13 +1,21 @@
 ---
 # tasks file for tftpd
+- name: load default variables
+  include_vars:
+    file: default.yml
+
+- name: load os-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - default.yml
+
 - name: install software
   package:
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ tftpd_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-        | default(tftpd_packages[ansible_distribution]
-        | default(tftpd_packages['default'] )) }}"
+    - "{{ tftpd_packages }}"
 
 - name: create tfptroot
   file:

@@ -1,0 +1,50 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: tftpd-alpine-edge
+    image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: tftpd-alpine-latest
+    image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: tftpd-archlinux
+    image: base/archlinux
+  - name: tftpd-centos-6
+    image: centos:6
+  - name: tftpd-centos-latest
+    image: centos:latest
+  - name: tftpd-debian-latest
+    image: debian:latest
+  - name: tftpd-debian-stable
+    image: debian:stable
+  - name: tftpd-debian-unstable
+    image: debian:unstable
+  - name: tftpd-fedora-latest
+    image: fedora:latest
+  - name: tftpd-fedora-rawhide
+    image: fedora:rawhide
+  - name: tftpd-opensuse-leap
+    image: opensuse:leap
+  - name: tftpd-opensuse-tumbleweed
+    image: opensuse:tumbleweed
+  - name: tftpd-ubuntu-artful
+    image: ubuntu:artful
+  - name: tftpd-ubuntu-devel
+    image: ubuntu:devel
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: goss
+  lint:
+    name: yamllint

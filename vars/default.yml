@@ -1,4 +1,0 @@
----
-# vars file for template
-tftpd_packages:
-  - tftpd

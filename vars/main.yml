@@ -1,6 +1,6 @@
 ---
 # vars file for template
-tftpd_packages:
+_tftpd_packages:
   default:
     - tftpd
   CentOS:
@@ -11,3 +11,5 @@ tftpd_packages:
     - yast2-tftp-server
   openSUSE Tumbleweed:
     - yast2-tftp-server
+
+tftpd_packages: "{{ _tftpd_packages[ansible_distribution] | default(_tftpd_packages['default']) }}"

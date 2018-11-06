@@ -2,8 +2,7 @@
 # tasks file for tftpd
 - name: install tftpd
   package:
-    name: "{{ tftpd_packages[ansible_distribution]
-          | default(tftpd_packages['default']) }}"
+    name: "{{ tftpd_packages }}"
     state: "{{ tftpd_package_state }}"
 
 - name: create tfptroot

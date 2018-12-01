@@ -20,6 +20,9 @@ provisioner:
     defaults:
       callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
   inventory:
+    host_vars:
+      tftpd-fedora-rawhide:
+        ansible_python_interpreter: /usr/bin/python3
     group_vars:
       all:
         xinetd_ignore_docker: no

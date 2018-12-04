@@ -4,6 +4,9 @@
   package:
     name: "{{ tftpd_packages }}"
     state: "{{ tftpd_package_state }}"
+  register: tftpd_install_tftpd
+  until: tftpd_install_tftpd
+  retries: 3
 
 - name: create tfptroot
   file:

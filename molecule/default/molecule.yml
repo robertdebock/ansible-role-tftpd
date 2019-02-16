@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: tftpd-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: tftpd-ubuntu-artful
-    image: ubuntu:artful
+  - name: tftpd-ubuntu-latest
+    image: ubuntu:latest
+  - name: tftpd-ubuntu-rolling
+    image: ubuntu:rolling
   - name: tftpd-ubuntu-devel
     image: ubuntu:devel
   - name: tftpd-ubuntu-latest

@@ -28,7 +28,3 @@ provisioner:
         xinetd_ignore_docker: no
 scenario:
   name: fedora-rawhide
-verifier:
-  name: goss
-  lint:
-    name: yamllint

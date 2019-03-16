@@ -3,6 +3,3 @@
 
 # The location where tftp will look for files.
 tftpd_tftproot: /tftpboot
-
-# To update all packages installed by this roles, set `tftpd_package_state` to `latest`.
-tftpd_package_state: present

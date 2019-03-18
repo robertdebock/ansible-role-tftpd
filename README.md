@@ -13,14 +13,24 @@ This example is taken from `molecule/default/playbook.yml`:
 ---
 - name: Converge
   hosts: all
-  become: true
-  gather_facts: false
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - robertdebock.tftpd
+```
+
+The machine you are running this on, may need to be prepared. Tests have been done on machines prepared by this playbook:
+```yaml
+---
+- name: Prepare
+  hosts: all
+  become: yes
+  gather_facts: no
 
   roles:
     - robertdebock.bootstrap
     - robertdebock.xinetd
-    - robertdebock.tftpd
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -35,10 +45,6 @@ These variables are set in `defaults/main.yml`:
 
 # The location where tftp will look for files.
 tftpd_tftproot: /tftpboot
-
-# To update all packages installed by this roles, set `tftpd_package_state` to `latest`.
-tftpd_package_state: present
-
 ```
 
 Requirements

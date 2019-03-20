@@ -43,4 +43,4 @@ galaxy_info:
     - ubuntu
 
 dependencies:
-  - role: robertdebock.xinetd
+  - robertdebock.xinetd

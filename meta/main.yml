@@ -37,10 +37,6 @@ galaxy_info:
     - system
     - pxe
     - centos
-    - debian
-    - fedora
-    - rhel
-    - ubuntu
 
 dependencies:
   - robertdebock.xinetd

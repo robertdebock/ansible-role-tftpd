@@ -3,6 +3,8 @@
 _tftpd_packages:
   default:
     - tftpd
+  Amazon:
+    - tftp-server
   CentOS:
     - tftp-server
   Fedora:

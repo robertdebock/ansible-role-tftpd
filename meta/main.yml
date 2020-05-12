@@ -39,4 +39,5 @@ galaxy_info:
     - pxe
     - centos
 
-dependencies:   - robertdebock.xinetd
+dependencies:
+  - robertdebock.xinetd

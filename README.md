@@ -2,9 +2,9 @@
 
 Install and configure tftpd on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-tftpd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-tftpd)|[![github](https://github.com/robertdebock/ansible-role-tftpd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tftpd/actions)|[![quality](https://img.shields.io/ansible/quality/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![downloads](https://img.shields.io/ansible/role/d/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-tftpd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-tftpd)|[![github](https://github.com/robertdebock/ansible-role-tftpd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tftpd/actions)|[![quality](https://img.shields.io/ansible/quality/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![downloads](https://img.shields.io/ansible/role/d/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tftpd.svg)](https://github.com/robertdebock/ansible-role-tftpd/releases/)|
 
 ## [Example Playbook](#example-playbook)
 

@@ -1,0 +1,6 @@
+---
+- name: test if tftpd_tftproot is set correctly
+  assert:
+    that:
+      - tftpd_tftproot is defined
+      - tftpd_tftproot | length > 0

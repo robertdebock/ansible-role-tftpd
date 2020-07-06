@@ -1,5 +1,6 @@
 ---
 # vars file for template
+
 _tftpd_packages:
   default:
     - tftpd

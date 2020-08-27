@@ -9,10 +9,12 @@
   file:
     path: "{{ tftpd_tftproot }}"
     state: directory
+    mode: "0755"
 
 - name: enable tftpd in xinetd
   template:
     src: tftp.j2
     dest: /etc/xinetd.d/tftp
+    mode: "0644"
   notify:
     - restart xinetd

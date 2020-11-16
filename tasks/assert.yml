@@ -3,5 +3,4 @@
   assert:
     that:
       - tftpd_tftproot is defined
-      - tftpd_tftproot | length > 0
     quiet: yes

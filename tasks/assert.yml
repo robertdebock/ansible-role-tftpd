@@ -1,4 +1,5 @@
 ---
+
 - name: test if tftpd_tftproot is set correctly
   assert:
     that:

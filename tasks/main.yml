@@ -1,5 +1,6 @@
 ---
 # tasks file for tftpd
+
 - name: install tftpd
   package:
     name: "{{ tftpd_packages }}"

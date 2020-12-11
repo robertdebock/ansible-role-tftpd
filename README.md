@@ -2,9 +2,9 @@
 
 Install and configure tftpd on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-tftpd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-tftpd)|[![github](https://github.com/robertdebock/ansible-role-tftpd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tftpd/actions)|[![quality](https://img.shields.io/ansible/quality/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![downloads](https://img.shields.io/ansible/role/d/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tftpd.svg)](https://github.com/robertdebock/ansible-role-tftpd/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-tftpd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-tftpd)|[![github](https://github.com/robertdebock/ansible-role-tftpd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tftpd/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-tftpd/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-tftpd)|[![quality](https://img.shields.io/ansible/quality/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![downloads](https://img.shields.io/ansible/role/d/21854)](https://galaxy.ansible.com/robertdebock/tftpd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tftpd.svg)](https://github.com/robertdebock/ansible-role-tftpd/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -48,10 +48,11 @@ tftpd_tftproot: /tftpboot
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-tftpd/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|

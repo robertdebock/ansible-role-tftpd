@@ -1,5 +1,2 @@
 ---
 # defaults file for tftpd
-
-# The location where tftp will look for files.
-tftpd_tftproot: /tftpboot

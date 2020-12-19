@@ -5,5 +5,38 @@
   gather_facts: no
 
   tasks:
-    - name: check if connection still works
-      ping:
+    - name: check if /var/lib/tftpboot
+      stat:
+        path: /var/lib/tftpboot
+      register: tftpboot_directory
+      failed_when:
+        - not tftpboot_directory.stat.isdir | bool
+
+    - name: install tftp client
+      package:
+        name: tftp
+        state: present
+      notify:
+        - uninstall tftp client
+
+    - name: touch /var/lib/tftpboot/test
+      file:
+        path: /var/lib/tftpboot/test
+        mode: "0777"
+        state: touch
+      notify:
+        - remove /var/lib/tftpboot/test
+
+    - name: put /etc/passwd to test
+      command: tftp localhost -c put /etc/passwd test
+
+  handlers:
+    - name: uninstall tftp client
+      package:
+        name: tftp
+        state: absent
+
+    - name: remove /var/lib/tftpboot/test
+      file:
+        path: /var/lib/tftpboot/test
+        state: absent

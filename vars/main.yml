@@ -14,3 +14,8 @@ _tftpd_packages:
     - yast2-tftp-server
 
 tftpd_packages: "{{ _tftpd_packages[ansible_distribution] | default(_tftpd_packages['default']) }}"
+
+_tftpd_service:
+  default: tftp.socket
+
+tftpd_service: "{{ _tftpd_service[ansible_os_family] | default(_tftpd_service['default']) }}"

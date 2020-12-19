@@ -30,7 +30,7 @@ The machine needs to be prepared in CI this is done using `molecule/resources/pr
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.xinetd
+    # - role: robertdebock.xinetd
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -41,9 +41,6 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for tftpd
-
-# The location where tftp will look for files.
-tftpd_tftproot: /tftpboot
 ```
 
 ## [Requirements](#requirements)
@@ -57,13 +54,7 @@ The following roles are used to prepare a system. You may choose to prepare your
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|
 | [robertdebock.bootstrap](https://galaxy.ansible.com/robertdebock/bootstrap) | [![Build Status Travis](https://travis-ci.com/robertdebock/ansible-role-bootstrap.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-bootstrap) | [![Build Status GitHub](https://github.com/robertdebock/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-bootstrap/actions) |
-| [robertdebock.xinetd](https://galaxy.ansible.com/robertdebock/xinetd) | [![Build Status Travis](https://travis-ci.com/robertdebock/ansible-role-xinetd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-xinetd) | [![Build Status GitHub](https://github.com/robertdebock/ansible-role-xinetd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-xinetd/actions) |
 
-## [Dependencies](#dependencies)
-
-Most roles require some kind of preparation, this is done in `molecule/default/prepare.yml`. This role has a "hard" dependency on the following roles:
-
-- robertdebock.xinetd
 ## [Context](#context)
 
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.

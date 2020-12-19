@@ -1,4 +1,4 @@
 ---
 roles:
   - name: robertdebock.bootstrap
-  - name: robertdebock.xinetd
+  # - name: robertdebock.xinetd

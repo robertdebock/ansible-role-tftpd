@@ -2,7 +2,13 @@
 - name: Verify
   hosts: all
   become: yes
-  gather_facts: no
+  gather_facts: yes
+
+  vars:
+    _tftp_directory:
+      default: /var/lib/tftpboo
+      Debian: /srv/tftp
+    tftp_directory: "{{ _tftp_directory[ansible_os_family] | default(_tftp_directory['default']) }}"
 
   tasks:
     - name: install tftp client
@@ -12,13 +18,13 @@
       notify:
         - uninstall tftp client
 
-    - name: touch /var/lib/tftpboot/test
+    - name: touch {{ tftp_directory }}/test
       file:
-        path: /var/lib/tftpboot/test
+        path: "{{ tftp_directory }}/test"
         mode: "0777"
         state: touch
       notify:
-        - remove /var/lib/tftpboot/test
+        - remove test
 
     - name: put /etc/passwd to test
       command: tftp localhost -c put /etc/passwd test
@@ -29,7 +35,7 @@
         name: tftp
         state: absent
 
-    - name: remove /var/lib/tftpboot/test
+    - name: remove test
       file:
-        path: /var/lib/tftpboot/test
+        path: "{{ tftp_directory }}/test"
         state: absent

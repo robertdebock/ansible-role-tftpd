@@ -9,7 +9,7 @@ _tftpd_packages:
   RedHat:
     - tftp-server
   Susu:
-    - yast2-tftp-server
+    - tftp
 
 tftpd_packages: "{{ _tftpd_packages[ansible_os_family] | default(_tftpd_packages['default']) }}"
 

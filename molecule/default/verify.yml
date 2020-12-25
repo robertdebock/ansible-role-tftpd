@@ -6,7 +6,7 @@
 
   vars:
     _tftp_directory:
-      default: /var/lib/tftpboo
+      default: /var/lib/tftpboot
       Debian: /srv/tftp
     tftp_directory: "{{ _tftp_directory[ansible_os_family] | default(_tftp_directory['default']) }}"
 

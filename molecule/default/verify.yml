@@ -9,7 +9,7 @@
       default: &default /var/lib/tftpboot
       Debian: /srv/tftp
       Ubuntu-18: *default
-      Suse: /tftpboot
+      Suse: /srv/tftpboot
     tftp_directory: "{{ _tftp_directory[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_tftp_directory[ansible_os_family] | default(_tftp_directory['default'])) }}"
     tftp_client_package: tftp
 

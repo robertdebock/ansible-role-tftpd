@@ -8,7 +8,7 @@ _tftpd_packages:
     - tftpd-hpa
   RedHat:
     - tftp-server
-  Susu:
+  Suse:
     - tftp
 
 tftpd_packages: "{{ _tftpd_packages[ansible_os_family] | default(_tftpd_packages['default']) }}"

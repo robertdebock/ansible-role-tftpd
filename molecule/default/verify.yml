@@ -10,11 +10,7 @@
       Debian: /srv/tftp
       Ubuntu-18: *default
     tftp_directory: "{{ _tftp_directory[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_tftp_directory[ansible_os_family] | default(_tftp_directory['default'])) }}"
-
-    _tftp_client_package:
-      default: tftp
-      Suse: atftp
-    tftp_client_package: "{{ _tftp_client_package[ansible_os_family] | default(_tftp_client_package['default']) }}"
+    tftp_client_package: tftp
 
   tasks:
     - name: install tftp client

@@ -6,14 +6,20 @@
 
   vars:
     _tftp_directory:
-      default: /var/lib/tftpboot
+      default: &default /var/lib/tftpboot
       Debian: /srv/tftp
-    tftp_directory: "{{ _tftp_directory[ansible_os_family] | default(_tftp_directory['default']) }}"
+      Ubuntu-18: *default
+    tftp_directory: "{{ _tftp_directory[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_tftp_directory[ansible_os_family] | default(_tftp_directory['default'])) }}"
+
+    _tftp_client_package:
+      default: tftp
+      Suse: atftp
+    tftp_client_package: "{{ _tftp_client_package[ansible_os_family] | default(_tftp_client_package['default']) }}"
 
   tasks:
     - name: install tftp client
       package:
-        name: tftp
+        name: "{{ tftp_client_package }}"
         state: present
       notify:
         - uninstall tftp client
@@ -32,7 +38,7 @@
   handlers:
     - name: uninstall tftp client
       package:
-        name: tftp
+        name: "{{ tftp_client_package }}"
         state: absent
 
     - name: remove test

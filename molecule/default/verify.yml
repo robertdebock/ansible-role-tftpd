@@ -15,14 +15,14 @@
 
   tasks:
     - name: install tftp client
-      package:
+      ansible.builtin.package:
         name: "{{ tftp_client_package }}"
         state: present
       notify:
         - uninstall tftp client
 
     - name: touch {{ tftp_directory }}/test
-      file:
+      ansible.builtin.file:
         path: "{{ tftp_directory }}/test"
         mode: "0777"
         state: touch
@@ -34,11 +34,11 @@
 
   handlers:
     - name: uninstall tftp client
-      package:
+      ansible.builtin.package:
         name: "{{ tftp_client_package }}"
         state: absent
 
     - name: remove test
-      file:
+      ansible.builtin.file:
         path: "{{ tftp_directory }}/test"
         state: absent

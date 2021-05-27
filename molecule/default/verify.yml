@@ -30,7 +30,8 @@
         - remove test
 
     - name: put /etc/passwd to test
-      command: tftp localhost -c put /etc/passwd test
+      ansible.builtin.command:
+        cmd: tftp localhost -c put /etc/passwd test
 
   handlers:
     - name: uninstall tftp client

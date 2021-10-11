@@ -34,6 +34,7 @@
         cmd: tftp localhost -c put /etc/passwd test
 
   handlers:
+
     - name: uninstall tftp client
       ansible.builtin.package:
         name: "{{ tftp_client_package }}"

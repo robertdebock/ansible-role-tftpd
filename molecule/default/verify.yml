@@ -19,7 +19,7 @@
         name: "{{ tftp_client_package }}"
         state: present
       notify:
-        - uninstall tftp client
+        - Uninstall tftp client
 
     - name: Touch {{ tftp_directory }}/test
       ansible.builtin.file:
@@ -27,14 +27,13 @@
         mode: "0777"
         state: touch
       notify:
-        - remove test
+        - Remove test
 
     - name: Put /etc/passwd to test
       ansible.builtin.command:
         cmd: tftp localhost -c put /etc/passwd test
 
   handlers:
-
     - name: Uninstall tftp client
       ansible.builtin.package:
         name: "{{ tftp_client_package }}"

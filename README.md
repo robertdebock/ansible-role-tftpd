@@ -1,4 +1,4 @@
-# Ansible role [tftpd](#tftpd)
+# [Ansible role tftpd](#tftpd)
 
 Install and configure tftpd on your system.
 

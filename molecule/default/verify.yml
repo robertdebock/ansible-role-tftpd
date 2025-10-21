@@ -15,6 +15,14 @@
       default: tftp
       Debian: atftp
     tftp_client_package: "{{ _tftp_client_package[ansible_os_family] | default(_tftp_client_package['default']) }}"
+    _tftp_client_command:
+      default: tftp
+      Debian: atftp
+    tftp_client_command: "{{ _tftp_client_command[ansible_os_family] | default(_tftp_client_command['default']) }}"
+    _tftp_test_command:
+      default: "{{ tftp_client_command }} localhost -c put /etc/passwd test"
+      Debian: "echo \"put /etc/passwd test\" | {{ tftp_client_command }} localhost"
+    tftp_test_command: "{{ _tftp_test_command[ansible_os_family] | default(_tftp_test_command['default']) }}"
 
   tasks:
     - name: Install tftp client
@@ -24,7 +32,7 @@
       notify:
         - Uninstall tftp client
 
-    - name: Touch {{ tftp_directory }}/test
+    - name: Touch tftp_directory/test
       ansible.builtin.file:
         path: "{{ tftp_directory }}/test"
         mode: "0777"
@@ -33,8 +41,8 @@
         - Remove test
 
     - name: Put /etc/passwd to test
-      ansible.builtin.shell: |
-        echo "put /etc/passwd test" | atftp localhost
+      ansible.builtin.shell: "{{ tftp_test_command }}"
+      changed_when: true
 
   handlers:
     - name: Uninstall tftp client
